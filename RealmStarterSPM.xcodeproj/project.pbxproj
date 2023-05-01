@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA012FB72A00340A00D95FC2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA012FB62A00340A00D95FC2 /* Person.swift */; };
+		DA012FBA2A00353700D95FC2 /* MyRealmPackage in Frameworks */ = {isa = PBXBuildFile; productRef = DA012FB92A00353700D95FC2 /* MyRealmPackage */; };
+		DA012FBC2A00353800D95FC2 /* MyRealmPackage in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DA012FB92A00353700D95FC2 /* MyRealmPackage */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DA012FBE2A00355200D95FC2 /* MyRealmPackage in Frameworks */ = {isa = PBXBuildFile; productRef = DA012FBD2A00355200D95FC2 /* MyRealmPackage */; };
+		DA012FC02A00355200D95FC2 /* MyRealmPackage in Embed Frameworks */ = {isa = PBXBuildFile; productRef = DA012FBD2A00355200D95FC2 /* MyRealmPackage */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DA012FC32A0036BB00D95FC2 /* PeopleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA012FC22A0036BB00D95FC2 /* PeopleListView.swift */; };
+		DA012FC52A0037E500D95FC2 /* PersonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA012FC42A0037E500D95FC2 /* PersonFormView.swift */; };
 		DA7531DA2A002A3E0031B1A9 /* RealmStarterSPMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7531D92A002A3E0031B1A9 /* RealmStarterSPMApp.swift */; };
 		DA7531DC2A002A3E0031B1A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7531DB2A002A3E0031B1A9 /* ContentView.swift */; };
 		DA7531DE2A002A400031B1A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7531DD2A002A400031B1A9 /* Assets.xcassets */; };
@@ -33,8 +40,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA012FBB2A00353700D95FC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA012FBC2A00353800D95FC2 /* MyRealmPackage in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA012FBF2A00355200D95FC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA012FC02A00355200D95FC2 /* MyRealmPackage in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DA012FB42A00321800D95FC2 /* MyRealmPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyRealmPackage; sourceTree = "<group>"; };
+		DA012FB62A00340A00D95FC2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		DA012FC22A0036BB00D95FC2 /* PeopleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListView.swift; sourceTree = "<group>"; };
+		DA012FC42A0037E500D95FC2 /* PersonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonFormView.swift; sourceTree = "<group>"; };
 		DA7531D62A002A3E0031B1A9 /* RealmStarterSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmStarterSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7531D92A002A3E0031B1A9 /* RealmStarterSPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStarterSPMApp.swift; sourceTree = "<group>"; };
 		DA7531DB2A002A3E0031B1A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA012FBE2A00355200D95FC2 /* MyRealmPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA012FBA2A00353700D95FC2 /* MyRealmPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +117,30 @@
 			name = Packages;
 			sourceTree = "<group>";
 		};
+		DA012FB52A0033EF00D95FC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA012FB62A00340A00D95FC2 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA012FB82A00353700D95FC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA012FC12A00369A00D95FC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA012FC22A0036BB00D95FC2 /* PeopleListView.swift */,
+				DA012FC42A0037E500D95FC2 /* PersonFormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA7531CD2A002A3E0031B1A9 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +149,7 @@
 				DA7531E92A002A410031B1A9 /* RealmStarterSPMTests */,
 				DA7531F32A002A410031B1A9 /* RealmStarterSPMUITests */,
 				DA7531D72A002A3E0031B1A9 /* Products */,
+				DA012FB82A00353700D95FC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +166,8 @@
 		DA7531D82A002A3E0031B1A9 /* RealmStarterSPM */ = {
 			isa = PBXGroup;
 			children = (
+				DA012FC12A00369A00D95FC2 /* View */,
+				DA012FB52A0033EF00D95FC2 /* Model */,
 				DA7531D92A002A3E0031B1A9 /* RealmStarterSPMApp.swift */,
 				DA7531DB2A002A3E0031B1A9 /* ContentView.swift */,
 				DA7531DD2A002A400031B1A9 /* Assets.xcassets */,
@@ -147,12 +211,16 @@
 				DA7531D22A002A3E0031B1A9 /* Sources */,
 				DA7531D32A002A3E0031B1A9 /* Frameworks */,
 				DA7531D42A002A3E0031B1A9 /* Resources */,
+				DA012FBF2A00355200D95FC2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RealmStarterSPM;
+			packageProductDependencies = (
+				DA012FBD2A00355200D95FC2 /* MyRealmPackage */,
+			);
 			productName = RealmStarterSPM;
 			productReference = DA7531D62A002A3E0031B1A9 /* RealmStarterSPM.app */;
 			productType = "com.apple.product-type.application";
@@ -164,6 +232,7 @@
 				DA7531E22A002A410031B1A9 /* Sources */,
 				DA7531E32A002A410031B1A9 /* Frameworks */,
 				DA7531E42A002A410031B1A9 /* Resources */,
+				DA012FBB2A00353700D95FC2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +240,9 @@
 				DA7531E82A002A410031B1A9 /* PBXTargetDependency */,
 			);
 			name = RealmStarterSPMTests;
+			packageProductDependencies = (
+				DA012FB92A00353700D95FC2 /* MyRealmPackage */,
+			);
 			productName = RealmStarterSPMTests;
 			productReference = DA7531E62A002A410031B1A9 /* RealmStarterSPMTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -267,8 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA012FB72A00340A00D95FC2 /* Person.swift in Sources */,
 				DA7531DC2A002A3E0031B1A9 /* ContentView.swift in Sources */,
 				DA7531DA2A002A3E0031B1A9 /* RealmStarterSPMApp.swift in Sources */,
+				DA012FC32A0036BB00D95FC2 /* PeopleListView.swift in Sources */,
+				DA012FC52A0037E500D95FC2 /* PersonFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +668,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA012FB92A00353700D95FC2 /* MyRealmPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyRealmPackage;
+		};
+		DA012FBD2A00355200D95FC2 /* MyRealmPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MyRealmPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA7531CE2A002A3E0031B1A9 /* Project object */;
 }
