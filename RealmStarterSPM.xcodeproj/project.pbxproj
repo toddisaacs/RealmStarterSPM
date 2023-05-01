@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA012FB42A00321800D95FC2 /* MyRealmPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyRealmPackage; sourceTree = "<group>"; };
 		DA7531D62A002A3E0031B1A9 /* RealmStarterSPM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmStarterSPM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7531D92A002A3E0031B1A9 /* RealmStarterSPMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStarterSPMApp.swift; sourceTree = "<group>"; };
 		DA7531DB2A002A3E0031B1A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,9 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA012FB32A00321700D95FC2 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DA012FB42A00321800D95FC2 /* MyRealmPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		DA7531CD2A002A3E0031B1A9 = {
 			isa = PBXGroup;
 			children = (
+				DA012FB32A00321700D95FC2 /* Packages */,
 				DA7531D82A002A3E0031B1A9 /* RealmStarterSPM */,
 				DA7531E92A002A410031B1A9 /* RealmStarterSPMTests */,
 				DA7531F32A002A410031B1A9 /* RealmStarterSPMUITests */,
