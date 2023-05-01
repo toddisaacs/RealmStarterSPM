@@ -6,31 +6,34 @@
 //
 
 import XCTest
+import MyRealmPackage
 @testable import RealmStarterSPM
+import RealmSwift
 
 final class RealmStarterSPMTests: XCTestCase {
 
+  private var realm:Realm?
+  
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+      realm = try! Realm()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    override func tearDownWithError() throws { }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testPersonCreationAndRetrieve() throws {
+      let person1 = Person(name: "Test 1")
+      let person2 = Person(name: "Test 2")
+      let person3 = Person(name: "Test 3")
+      
+      try! realm!.write {
+        realm!.add([person1, person2, person3])
+      }
+      
+      let people = realm?.objects(Person.self)
+      XCTAssertEqual(people!.count, 3)
+      
+      //Verify Realm association
+      XCTAssertNotNil(people![0].realm)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
