@@ -2,13 +2,14 @@ Current version of Realm 10.38 I found it difficult to setup SPM project where t
 
 https://github.com/realm/realm-swift/issues/8047
  
-Create Project
-Create new Package, include in the same git repo and uncheck the create git repo
-In XCode add package to project
-Edit Project Package.swift 
-  add the RealmSwift dependency (package)
-  add this to the targets below 
+* Create Project
+* Create new Package, include in the same git repo and uncheck the create git repo
+* In XCode add package to project
+* Edit Project Package.swift 
+  * add the RealmSwift dependency (package)
+  * add this to the targets below 
   
+  ```swift
   dependencies: [
         .package(url: "https://github.com/realm/realm-swift", from: "10.38.3")
     ],
