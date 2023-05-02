@@ -9,16 +9,30 @@ https://github.com/realm/realm-swift/issues/8047
   * add the RealmSwift dependency (package)
   * add this to the targets below 
   
-  ```swift
-  dependencies: [
-        .package(url: "https://github.com/realm/realm-swift", from: "10.38.3")
+  ```
+  name: "MyRealmPackage",
+    products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
+        .library(
+            name: "MyRealmPackage",
+            type: .dynamic,
+            targets: ["MyRealmPackage"]),
+    ],
+    dependencies: [
+            .package(url: "https://github.com/realm/realm-swift", from: "10.38.3")
     ],
     targets: [
+        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
+        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "MyPackageForRealm",
+            name: "MyRealmPackage",
             dependencies: [
-                .product(name: "RealmSwift", package: "realm-swift")]),
+              .product(name: "RealmSwift", package: "realm-swift")
+            ]),
         .testTarget(
+            name: "MyRealmPackageTests",
+            dependencies: ["MyRealmPackage"]),
+    ]
         
 In Xcode for the project and test targets under build phase link binary with targets
 
